@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style>
+    td {
+      font-size: 30px;
+      width: 30px;
+      /* border: 2px solid green; */
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px;
+      padding: 10px;
+
+      border: 0px solid white;
+
+    }
+    .stn {
+      color: #000;
+      border: 0px none white;
+      width: 300px;
+      height: 300px;
+      box-shadow: 12px 12px 5px gray, -9px -9px 5px gray;
+      margin: auto;
+    }
+
+    h1,
+    .setting {
+      text-align: center;
+      background-color: white;
+      color: blue;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .setting {
+      background-color: gray;
+      border: 2px solid black;
+      width: 250px;
+      margin: auto;
+    }
+
+    table ,#tb{
+      /* border: 1px inset grey; */
+      /* border-radius: 0px 10% 0px 10px; */
+      color: #000;
+      border: 0px none white;
+      /* width: 300px;
+      height: 300px; */
+      width: 50%;
+      box-shadow: 12px 12px 5px gray, -9px -9px 5px gray;
+    }
+    #tb{
+      margin: auto;
+    }
+
+    button {
+
+      width: 70px;
+      height: 40px;
+      margin-top: 0px;
+      text-align: right;
+      margin: 0px 0px 0px 50%;
+    }
+
+    .di {
+      color: blue;
+      width: 500px;
+      height: 400px;
+      border: 5px solid black;
+      margin-top: 40px;
+    }
+  </style>
+  <script src="../javascript/jquery-1.4.4.min.js" type="text/javascript"></script>
+  <script src="../javascript/game100jsversion2.js" type="text/javascript"></script>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>tic tac toe</title>
+</head>
+
+<body>
+  <h1>
+    GAME DASHBOARD
+  </h1>
+  <!-- <h2 class="setting" onclick="setting()">SETTINGS </h2> -->
+<!-- <h3 class="stn">
+  <p>soling this fun</p> -->
+ 
+<!-- </h3> -->
+<table id="tb">
+  <tr><td >Player X scores</td><td>Player O scores</td></tr>
+  <tr><td id="p1">0</td><td id="p2">0</td></tr>
+</table>
+  <center>
+    <table border="2px">
+      <tr>
+        <td onclick="func1()" id="t1">*</td>
+        <td onclick="func2()" id="t2">*</td>
+        <td onclick="func3()" id="t3">*</td>
+        <td onclick="func4()" id="t4">*</td>
+        <td onclick="func5()" id="t5">*</td>
+        <td onclick="func6()" id="t6">*</td>
+        <td onclick="func7()" id="t7">*</td>
+        <td onclick="func8()" id="t8">*</td>
+        <td onclick="func9()" id="t9">*</td>
+        <td onclick="func10()" id="t10">*</td>
+      </tr>
+
+      <tr>
+        <td onclick="func11()" id="t11">*</td>
+        <td onclick="func12()" id="t12">*</td>
+        <td onclick="func13()" id="t13">*</td>
+        <td onclick="func14()" id="t14">*</td>
+        <td onclick="func15()" id="t15">*</td>
+        <td onclick="func16()" id="t16">*</td>
+        <td onclick="func17()" id="t17">*</td>
+        <td onclick="func18()" id="t18">*</td>
+        <td onclick="func19()" id="t19">*</td>
+        <td onclick="func20()" id="t20">*</td>
+      </tr>
+
+      <tr>
+        <td onclick="func21()" id="t21">*</td>
+        <td onclick="func22()" id="t22">*</td>
+        <td onclick="func23()" id="t23">*</td>
+        <td onclick="func24()" id="t24">*</td>
+        <td onclick="func25()" id="t25">*</td>
+        <td onclick="func26()" id="t26">*</td>
+        <td onclick="func27()" id="t27">*</td>
+        <td onclick="func28()" id="t28">*</td>
+        <td onclick="func29()" id="t29">*</td>
+        <td onclick="func30()" id="t30">*</td>
+      </tr>
+
+      </tr>
+<!-- this is section -->
+<tr>
+  <td onclick="func31()" id="t31">*</td>
+  <td onclick="func32()" id="t32">*</td>
+  <td onclick="func33()" id="t33">*</td>
+  <td onclick="func34()" id="t34">*</td>
+  <td onclick="func35()" id="t35">*</td>
+  <td onclick="func36()" id="t36">*</td>
+  <td onclick="func37()" id="t37">*</td>
+  <td onclick="func38()" id="t38">*</td>
+  <td onclick="func39()" id="t39">*</td>
+  <td onclick="func40()" id="t40">*</td>
+</tr>
+
+</tr>
+
+<tr>
+  <td onclick="func41()" id="t41">*</td>
+        <td onclick="func42()" id="t42">*</td>
+        <td onclick="func43()" id="t43">*</td>
+        <td onclick="func44()" id="t44">*</td>
+        <td onclick="func45()" id="t45">*</td>
+        <td onclick="func46()" id="t46">*</td>
+        <td onclick="func47()" id="t47">*</td>
+        <td onclick="func48()" id="t48">*</td>
+        <td onclick="func49()" id="t49">*</td>
+        <td onclick="func50()" id="t50">*</td>
+      </tr>
+
+</tr>
+
+<tr>
+  <td onclick="func51()" id="t51">*</td>
+        <td onclick="func52()" id="t52">*</td>
+        <td onclick="func53()" id="t53">*</td>
+        <td onclick="func54()" id="t54">*</td>
+        <td onclick="func55()" id="t55">*</td>
+        <td onclick="func56()" id="t56">*</td>
+        <td onclick="func57()" id="t57">*</td>
+        <td onclick="func58()" id="t58">*</td>
+        <td onclick="func59()" id="t59">*</td>
+        <td onclick="func60()" id="t60">*</td>
+      </tr>
+
+</tr>
+<!-- this is another section -->
+<tr>
+  <td onclick="func61()" id="t61">*</td>
+        <td onclick="func62()" id="t62">*</td>
+        <td onclick="func63()" id="t63">*</td>
+        <td onclick="func64()" id="t64">*</td>
+        <td onclick="func65()" id="t65">*</td>
+        <td onclick="func66()" id="t66">*</td>
+        <td onclick="func67()" id="t67">*</td>
+        <td onclick="func68()" id="t68">*</td>
+        <td onclick="func69()" id="t69">*</td>
+        <td onclick="func70()" id="t70">*</td>
+      </tr>
+
+
+<tr>
+  <td onclick="func71()" id="t71">*</td>
+        <td onclick="func72()" id="t72">*</td>
+        <td onclick="func73()" id="t73">*</td>
+        <td onclick="func74()" id="t74">*</td>
+        <td onclick="func75()" id="t75">*</td>
+        <td onclick="func76()" id="t76">*</td>
+        <td onclick="func77()" id="t77">*</td>
+        <td onclick="func78()" id="t78">*</td>
+        <td onclick="func79()" id="t79">*</td>
+        <td onclick="func80()" id="t80">*</td>
+      </tr>
+
+
+<tr>
+  <td onclick="func81()" id="t81">*</td>
+  <td onclick="func82()" id="t82">*</td>
+  <td onclick="func83()" id="t83">*</td>
+  <td onclick="func84()" id="t84">*</td>
+  <td onclick="func85()" id="t85">*</td>
+  <td onclick="func86()" id="t86">*</td>
+  <td onclick="func87()" id="t87">*</td>
+  <td onclick="func88()" id="t88">*</td>
+  <td onclick="func89()" id="t89">*</td>
+  <td onclick="func90()" id="t90">*</td>
+</tr>
+
+<tr>
+  <td onclick="func91()" id="t91">*</td>
+  <td onclick="func92()" id="t92">*</td>
+  <td onclick="func93()" id="t93">*</td>
+  <td onclick="func94()" id="t94">*</td>
+  <td onclick="func95()" id="t95">*</td>
+  <td onclick="func96()" id="t96">*</td>
+  <td onclick="func97()" id="t97">*</td>
+  <td onclick="func98()" id="t98">*</td>
+  <td onclick="func99()" id="t99">*</td>
+  <td onclick="func100()" id="t100">*</td>
+</tr>
+
+</tr>
+
+    </table>
+    <div class="di" id="di">
+
+    </div>
+  </center>
+</body>
+
+</html>
