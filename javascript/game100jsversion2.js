@@ -709,9 +709,6 @@ function setting() {
   ++set;
 }
 function gamesetting() {
-  // $("td").toggle(1500);
-  // update.innerHTML="";
-  //  alert(update);
   for (let i = 0; i < 9; ++i) {
     alert(array[i]);
   }
