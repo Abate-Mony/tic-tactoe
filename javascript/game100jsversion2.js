@@ -626,12 +626,30 @@ function func100() {
   }
   ex100 = 0;
 }
-
+var string="GAME DASHBOARD!";
+const delay=200;
+var i=0;
+ setInterval(() => {
+     document.getElementById("dash").innerHTML=sub(i);
+     ++i;
+     if(i>=string.length){
+         i=0;
+     }
+     function sub(idx){
+    var txt=".";
+    for(let i=0;i<idx;i++){
+      txt=txt+string[i];
+    }
+    return txt;
+}
+      }, delay);
+     
 //this varaibles helps to keep track of the matching values 
 var a1, a2, a3, a4, flag1, flag2, flag3, flag4;
 //this var helps to set the player X and O scores
 var pla1 = 0, pla2 = 0;
 function check() {
+  
   a1 = 0; a2 = 0; a3 = 0;
   a4 = 0, flag1 = 0, flag2 = 0, flag3 = 0, flag4 = 0;
   //loops through the array to find a match
@@ -665,6 +683,7 @@ function check() {
       ++flag4;
     }
     //this function helps to increement the value of the player when a condition is made;
+    clicK();
     function valid()
     {
       if(flag1>2 && flag2>2 && flag3 >2 && flag4>2){
@@ -682,17 +701,31 @@ function check() {
     //end if the function
     if (array[y] == "X" && (flag1 > 2 || flag2 > 2 || flag3 > 2 || flag4 > 2)) {
       pla1=valid() +pla1;
-          alert("player X won");
+      win();
       document.getElementById("p1").innerHTML = pla1;
         --click;
       }
     }
     if(array[y] == "O" && (flag1 > 2 || flag2 > 2 || flag3 > 2 || flag4 > 2))  {
         pla2=valid() +pla2;
-        alert("player 0 won");
         document.getElementById("p2").innerHTML = pla2;
         --click;
+        win();
     }
+}
+
+function clicK(){
+  var audio=new Audio('2.wav');
+  if (flag1 > 2 || flag2 > 2 || flag3 > 2 || flag4 > 2){
+    audio.pause();
+  }else{
+    audio.play();
+  }
+
+}
+function win(){
+  var audio=new Audio('1.wav');
+  audio.play();
 }
 var set = 0;
 function setting() {
@@ -920,4 +953,8 @@ function reset() {
   document.getElementById("t98").style.backgroundColor="white";
   document.getElementById("t99").innerHTML="*";
   document.getElementById("t99").style.backgroundColor="white";
+  pla2=0;
+  pla1=0;
+  document.getElementById("p1").innerHTML = pla1;
+  document.getElementById("p2").innerHTML = pla2;
 }
